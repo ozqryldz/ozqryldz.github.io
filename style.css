@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: #eee;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100%;
+}
+
+.menu{
+    background-color: #ddd;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menu .logo{
+    width: 220px;
+    height: 60px;
+    padding: 10px 10px;
+}
+.menu .logo h1{
+    font-size: 28px;
+    color: #ff652f;
+    text-align: center;
+    text-shadow: 0 0 5px #747474 ;
+}
+.menu ul{
+    width: calc(100% - 200px);
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.menu ul li{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 100%;
+    list-style-type: none;
+    padding: 15px 15px;
+    border-right: #FF652F 1px solid;
+    position: relative;
+}
+.menu ul li:first-child{
+    padding-left: 100px;
+}
+.menu ul li:nth-child(2){
+    padding-left: 40px;
+}
+.menu ul li:last-child{
+    border-right: none;
+}
+
+
+.menu ul li:nth-child(1)::before{
+    
+    content: '';
+    position: absolute;
+    width:170px;
+    height: 2px;
+    background-color: #ff652f;
+    top: 50px;
+    left: 60px;
+    transform: scaleX(0);  
+    transition: transform 400ms ease-in;
+}
+.menu ul li:nth-child(1):hover::before{
+    transform: scaleX(1);
+}
+.menu ul li:nth-child(2)::before{
+    
+    content: '';
+    position: absolute;
+    width:210px;
+    height: 2px;
+    background-color: #ff652f;
+    top: 50px;
+    left: 10px;
+    transform: scaleX(0);  
+    transition: transform 400ms ease-in;
+}
+.menu ul li:nth-child(2):hover::before{
+    transform: scaleX(1);
+}
+.menu ul li:nth-child(3)::before{
+    
+    content: '';
+    position: absolute;
+    width:160px;
+    height: 2px;
+    background-color: #ff652f;
+    top: 50px;
+    left: 0px;
+    transform: scaleX(0);  
+    transition: transform 400ms ease-in;
+}
+.menu ul li:nth-child(3):hover::before{
+    transform: scaleX(1);
+}
+
+
+
+/*.menu ul li:nth-child(2):before{
+    
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 5px;
+    background-color: #ff652f;
+    top: 50px;
+    left: -10px;
+}
+*/
+
+.menu ul li a{
+    font-size: 23px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ff652f;
+    opacity: 0.5;
+    transition:0.5s;
+}
+
+.menu ul li a:hover{
+    opacity: 1;
+}
+
+.tanitim-baslik{
+    font-size: 25px;
+    color: orange;
+}
+.aciklama{
+    font-size: 15px;
+}
+.onizle{
+    width: calc(100% - 50px);
+    height: 400px;
+    margin: 15px 15px;
+    margin-top: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px gray;
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+.onizle-baslik{
+    position: relative;
+    padding-left: 30px;
+    color: black;
+}
+.onizle .onizle-ders-kutusu{
+    width: 325px;
+    height: 370px;
+    background-color: white;
+    float: left;
+    margin: 5px 5px; 
+    border-radius: 5px;  
+    box-shadow: 0 0 10px gray;
+    position: relative;
+}
+.onizle .onizle-ders-kutusu:hover{
+    box-shadow: 0 0 10px chocolate;
+    
+}
+.onizle .onizle-ders-kutusu img{
+    width: 325px;
+    border-radius: 5px 5px 0 0;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.onizle .onizle-ders-kutusu img:hover{
+    opacity: 1;
+}
+.onizle .onizle-ders-kutusu .onizle-ders-baslik{
+    color: orange;
+    font-size: 15px;
+    margin-left: 15px;
+}
+.onizle .onizle-ders-kutusu .onizle-ust-aciklama{
+    font-size: 14px;
+    margin-left: 15px;
+}
+.onizle .onizle-ders-kutusu .onizle-dersListesi{
+    font-size: 14px;
+    margin-left: 30px;
+}
+.onizle .onizle-ders-kutusu .onizle-alt-aciklama{
+    font-size: 14px;
+    margin-left: 15px;
+}
+.onizle .onizle-ders-kutusu .onizle-buton{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ccc;
+    border: 2px;
+    border-radius: 5px;
+    color: orange;
+    cursor: pointer;
+    box-shadow: 0 0 5px #ff652f;
+}
+.onizle .onizle-ders-kutusu .onizle-buton a{
+    color: chocolate;
+}
+.onizle .onizle-ders-kutusu .onizle-buton:hover{
+    box-shadow: 0 0 15px #ff652f;
+    color: black;
+    font-weight: 600;
+}
+
+.icerik-arka{
+    width: calc(100% - 20px);
+    height: 100%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 15px;
+    margin-left: 10px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px gray;
+}
+.icerik-arka .ders-kutusu{
+    width: 425px;
+    height: 450px;
+    background-color: white;
+    border-radius: 5px;  
+    box-shadow: 0 0 10px gray;
+    position: relative;
+    transition: 0.5s;
+}
+.icerik-arka .ders-kutusu:hover{
+    box-shadow: 0 0 10px chocolate;
+    
+}
+.icerik-arka .ders-kutusu .ders-resmi{
+    width: 425px;
+    border-radius: 5px 5px 0 0;
+    opacity: 0.7;
+    transition: 0.5s; 
+}
+.icerik-arka .ders-kutusu .ders-resmi:hover{
+    opacity: 1;
+}
+.icerik-arka .ders-kutusu .ders-baslik{
+    font-size: 20px;
+    color: orange;
+    margin-left: 20px;
+}
+.icerik-arka .ders-kutusu .ust-aciklama{
+    font-size: 18px;
+    color: black;
+    margin-left: 20px;
+}
+.icerik-arka .ders-kutusu ul{
+    margin-left: 50px;
+}
+.icerik-arka .ders-kutusu .alt-aciklama{
+    margin-left: 50px;
+}
+.icerik-arka .ders-kutusu button{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ccc;
+    border: 2px;
+    border-radius: 5px;
+    color: orange;
+    cursor: pointer;
+    box-shadow: 0 0 5px #ff652f;    
+}
+.icerik-arka .ders-kutusu button a{
+    color: chocolate;
+}
+.icerik-arka .ders-kutusu button:hover{
+    box-shadow: 0 0 15px #ff652f;
+    color: black;
+    font-weight: 600;
+}
+
